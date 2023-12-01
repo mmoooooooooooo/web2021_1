@@ -17,8 +17,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  const message = "Hello world";
-  res.render('show', {mes:message});
+  const massage = "";
+  res.render('show', {mes:"hello"});
 });
 
 
@@ -35,10 +35,13 @@ let sql = `insert into Shop ("genre", "shopName" , "postal_code" , "prefecture" 
         console.log( "データを追加しました" );
       });
     });
+    res.render("main", {mes:"登録が完了しました！"});
+  });
+
 app.use(function(req, res, next) {
   res.status(404).send('ページが見つかりません');
 });
-});
+
 
 
 
