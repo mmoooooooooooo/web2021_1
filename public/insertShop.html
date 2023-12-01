@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>店舗追加</title>
+</head>
+<body>
+<h2>店舗追加</h2>
+  <form action="/insert" method="post">
+  <p>ジャンル<br>
+    <select size="1" name="genre">
+      <option value="0">和食</option>
+      <option value="1">洋食</option>
+      <option value="2">イタリアン</option>
+      <option value="3">フレンチ</option>
+      <option value="4">中華</option>
+      <option value="5">焼き肉</option>
+      <option value="6">居酒屋</option>
+      <option value="" disabled selected>選択してください</option>
+    </select>
+  </p> 
+  <p>店名<br>
+    <input type="text" name="shopName">
+  </p>
+  <p>住所<br>
+      <label>
+        <span>郵便番号</span>
+        <input type="text" name="postal_code" minlength="7" maxlength="8" pattern="\d*" autocomplete="shipping postal-code">
+      </label>
+      <label>
+        <span>都道府県</span>
+        <select name="prefecture" autocomplete="shipping address-level1">
+          <option value="0">北海道</option>
+          <option value="1">青森</option>
+          <option value="2">岩手</option>
+          <option value="3">宮城</option>
+        </select>
+      </label>
+      <label>
+        <span>市区町村</span>
+        <input type="text" name="city" autocomplete="shipping address-level2">
+      </label>
+      <label>
+        <span>町名・番地</span>
+        <input type="text" name="address1" autocomplete="shipping address-line1">
+      </label>
+      <label>
+        <span>建物名等</span>
+        <input type="text" name="address2" autocomplete="shipping address-line2">
+      </label>
+  </p>
+  <p>営業時間<br>
+    <input type="number" name="time1" min="0" max="23">時
+    〜
+    <input type="number" name="time2" min="0" max="23">時
+  </p>
+     <button class="btn">送信</button>
+  </form>
+
+</body>
+</html>

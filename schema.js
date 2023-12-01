@@ -3,7 +3,8 @@ const db = new sqlite3.Database('test2.db');
 
 let sql = `
 select name,sql from sqlite_master where type='table';
-`;
+const db = new sqlite3.Database('test2.db');
+`
 
 db.serialize( () => {
 	db.each( sql, (error, row) => {

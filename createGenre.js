@@ -2,9 +2,10 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('test2.db');
 
 let schema = `
-create table maker(
+create table Genre(
   id integer primary key,
-  name text
+  genre
+  name text not null
 );
 `
 
