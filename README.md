@@ -22,5 +22,28 @@ select.js | テーブルからデータを取得するサンプル
 tables.js | テーブル名を表示するサンプル
 test.db | app5.jsやapp6.jsで使用するデータベース
 
-test
-test
+# テーブル店舗情報
+
+### Shop
+項目 | 型 | 内容 | 例
+-|-|-|-
+id |integer |primary key<br>店舗ID | 0
+genre|int |not null<br>ジャンル | 0
+shopName|text|not null<br>店名|いづく
+postal_code|char|not null<br>郵便番号|1111111
+prefecture|int|not null<br>都道府県|0
+city|text|not null<br>市区町村|三鷹
+address1|char|not null<br>丁目・番地|3丁目2番地
+address2|text|not null<br>建物名等|千葉工業大学
+time1|int|not  null<br>営業時間（時）|５
+time2|int|not null<br>営業時間（時）|6
+
+
+# テーブルジャンル
+
+### Genre
+項目 | 型 | 内容 | 例
+-|-|-|-
+id | integer | primary key<br>ジャンルID|0
+genre|name text| not null<br>ジャンル|中華
+

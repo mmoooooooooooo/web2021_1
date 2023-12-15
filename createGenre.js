@@ -4,7 +4,6 @@ const db = new sqlite3.Database('test2.db');
 let schema = `
 create table Genre(
   id integer primary key,
-  genre
   name text not null
 );
 `
@@ -18,3 +17,6 @@ db.serialize( () => {
     console.log( "テーブルを作成しました" );
   });
 });
+
+
+

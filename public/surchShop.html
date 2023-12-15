@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>店舗追加</title>
-  <link rel="stylesheet" href="/public/top.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗検索</title>
+    <link rel="stylesheet" href="/public/top.css">
 </head>
 <body>
-<h2>店舗追加</h2>
-  <form action="/insert" method="post">
-  <p>ジャンル<br>
-    <select size="1" name="genre" required><br>
-      <option value="0">和食</option>
-      <option value="1">洋食</option>
-      <option value="2">イタリアン</option>
-      <option value="3">フレンチ</option>
-      <option value="4">中華</option>
-      <option value="5">焼き肉</option>
-      <option value="6">居酒屋</option>
-      <option value="" disabled selected>選択してください</option>
-    </select>
-  </p> 
-  <p>店名<br>
-    <input type="text" name="shopName" required>
-  </p>
-  <p>住所<br>
-      <label>
-        <span>郵便番号</span><br>
-        <input type="text" name="postal_code" minlength="7" maxlength="8" pattern="\d*" autocomplete="shipping postal-code" required><br>
-      </label>
-      <label>
-        <span>都道府県</span><br>
-        <select name="prefecture" autocomplete="shipping address-level1" required><br>
+    <h2>店舗検索</h2>
+    <form action="/serch" method="get">
+        <p>ジャンル<br>
+            <select size="1" name="genre"><br>
+              <option value="0">和食</option>
+              <option value="1">洋食</option>
+              <option value="2">イタリアン</option>
+              <option value="3">フレンチ</option>
+              <option value="4">中華</option>
+              <option value="5">焼き肉</option>
+              <option value="6">居酒屋</option>
+              <option value="" disabled selected>選択してください</option>
+            </select>
+          </p> 
+        <p><span>都道府県</span><br>
+        <select name="prefecture" autocomplete="shipping address-level1"><br>
           <option value="0">北海道</option>
           <option value="1">青森</option>
           <option value="2">岩手</option>
@@ -80,28 +70,9 @@
           <option value="44">宮崎</option>
           <option value="45">鹿児島</option>
           <option value="46">沖縄</option>
-        </select>
-      </label><br>
-      <label>
-        <span>市区町村</span><br>
-        <input type="text" name="city" autocomplete="shipping address-level2" required><br>
-      </label>
-      <label>
-        <span>町名・番地</span><br>
-        <input type="text" name="address1" autocomplete="shipping address-line1" required><br>
-      </label>
-      <label>
-        <span>建物名等</span><br>
-        <input type="text" name="address2" autocomplete="shipping address-line2" required><br>
-      </label>
-  </p>
-  <p>営業時間<br>
-    <input type="number" name="time1" min="0" max="23" required>時
-    〜
-    <input type="number" name="time2" min="0" max="23" required>時
-  </p><br>
-     <button class="btn" required>登録</button>
-  </form>
+        </select></p>
+        <button class="btn">検索</button>
 
+    </form>
 </body>
 </html>

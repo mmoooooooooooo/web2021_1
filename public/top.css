@@ -1,0 +1,16 @@
+.blue{
+    color: #0022cc;
+}
+.white{
+    color: #ffffff;
+}
+body{background-color: #f5deb3; }
+
+#container {
+    display: flex;
+    justify-content: center;
+
+}
+.main {
+flex-flow: column;
+}
