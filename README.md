@@ -35,8 +35,8 @@ prefecture|int|not null<br>都道府県|0
 city|text|not null<br>市区町村|三鷹
 address1|char|not null<br>丁目・番地|3丁目2番地
 address2|text|not null<br>建物名等|千葉工業大学
-time1|int|not  null<br>営業時間（時）|５
-time2|int|not null<br>営業時間（時）|6
+time1|int|not  null<br>営業時間（始まり）|５
+time2|int|not null<br>営業時間（終わり）|6
 
 
 # テーブルジャンル

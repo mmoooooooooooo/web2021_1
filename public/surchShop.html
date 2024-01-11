@@ -8,9 +8,10 @@
 </head>
 <body>
     <h2>店舗検索</h2>
-    <form action="/serch" method="get">
+    <form action="/serch" method="get" required >
         <p>ジャンル<br>
-            <select size="1" name="genre"><br>
+            <select size="1" name="genre" required><br>
+              <option value="">選択してください</option>
               <option value="0">和食</option>
               <option value="1">洋食</option>
               <option value="2">イタリアン</option>
@@ -18,7 +19,6 @@
               <option value="4">中華</option>
               <option value="5">焼き肉</option>
               <option value="6">居酒屋</option>
-              <option value="" disabled selected>選択してください</option>
             </select>
           </p> 
         <p><span>都道府県</span><br>
